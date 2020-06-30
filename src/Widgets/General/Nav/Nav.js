@@ -1,13 +1,23 @@
 import React, {Component} from "react"
-import Toggle from './Toggle'
+import './Nav.css'
+import DrawerToggleButton from './SideDrawer/DrawerToggleButton'
 
-class Nav extends Component {
+class Nav extends Component {    
     render() {
         return (
-            <nav className="NavBar">
-                <h1>TYLER KIM</h1>
-                <Toggle /> 
-            </nav>
+            <header className="toolbar">
+                <nav className="toolbar_navigation">
+                    <div className="drawerToggleButton">
+                        <DrawerToggleButton onClick={this.props.onClick}/>
+                    </div>
+                    <div className="toolbar_logo"><a href="/">Tyler Kim</a></div>
+                    <div className="toolbar_navigation_items">
+                        <ul>
+                            <li><a href="/">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
         )
     }
 }

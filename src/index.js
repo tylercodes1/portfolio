@@ -1,11 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './Widgets/index.css';
+import './index.css';
 import App from './Widgets/General/App';
 import * as serviceWorker from './serviceWorker';
 
+
+import App2 from './Widgets/General/App2'
+import Test from './Widgets/Test/Test'
+
 ReactDOM.render(
-  <App />,
+  // <App />,
+  <App2 />,
+  // <Test />,
   document.getElementById('root')
 );
 

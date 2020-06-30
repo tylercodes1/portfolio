@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 } */
+
+.main {
+  position: relative;
+}
+
+p {
+  margin: 0;
+  color: black;
+  font-weight: 400;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  margin: 10px 0 0;
+}
+
+.app {
+  min-width: 50vw;
+}

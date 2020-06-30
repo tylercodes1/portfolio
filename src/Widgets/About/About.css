@@ -1,0 +1,8 @@
+* {
+    
+}
+.about_page {
+    position: absolute;
+    display: flex;
+    left: 100px;
+}
