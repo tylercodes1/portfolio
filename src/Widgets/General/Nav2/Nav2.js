@@ -5,6 +5,7 @@ import Nav2Item from './Nav2Item';
 import SocialItem from './SocialItem';
 import Github from './../../../assets/github/github';
 import Linkedin from './../../../assets/linkedin/linkedin';
+import PersonalLogo from '../../../assets/personal_logo/personallogo';
 
 
 class Nav2 extends Component {
@@ -27,7 +28,9 @@ class Nav2 extends Component {
     render() {
         return (
             <div className="navbar">
-                <div className="logo">LOGO</div>
+                <div className="logo">
+                    <PersonalLogo />
+                </div>
                 <div className="nav_items">
                     <Nav2Item link="home" active={this.state.active} onClick={(urmom => this.handleClick(urmom))} />   
                     <Nav2Item link="portfolio" active={this.state.active} onClick={(urmom => this.handleClick(urmom))} />  

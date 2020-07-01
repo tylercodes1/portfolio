@@ -1,3 +1,8 @@
+:root{
+  --select: #f2a365;
+  --backgr: #30475e;
+}
+
 #root {
   height: 100%;
 }
@@ -11,7 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
-  background: #30475e;
+  background: var(--backgr);
 }
 
 html {
