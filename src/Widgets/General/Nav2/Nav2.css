@@ -39,7 +39,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ececec;
+    color: var(--unselect);
     transition: color 0.4s;
     font-weight: bold;
 }
@@ -51,7 +51,7 @@
     width: 100%;
     position: absolute;
     top: 0;
-    background: #f2a365;
+    background: var(--select);
     left: -100%;
     transition: 0.4s;
 }
@@ -61,7 +61,7 @@ a {
 }
 
 .item:hover {
-    color: #222831;
+    color: var(--dashboard);
 }
 
 .item:hover > .back {
@@ -71,7 +71,7 @@ a {
 .item > .selected {
     left: 0;
     transform: translateX(0);
-    color: #222831;
+    color: var(--dashboard);
 }
 
 .item:hover > .selected {
@@ -104,12 +104,12 @@ a {
 }
 
 #github {
-    fill: #ececec;
+    fill: var(--unselect);
     transition: 0.2s;
 }
 
 .github:hover > #github {
-    fill: #f2a365;
+    fill: var(--select);
 }
 
 .linkedin {
@@ -118,19 +118,19 @@ a {
 }
 
 #linkedin1 {
-    fill: #ececec;
+    fill: var(--unselect);
     transition: 0.2s;
 }
 
 #linkedin2 {
-    fill: #ececec;
+    fill: var(--unselect);
     transition: 0.2s;
 }
 
 .linkedin:hover > #linkedin1 {
-    fill: #f2a365;
+    fill: var(--select);
 }
 
 .linkedin:hover > #linkedin2 {
-    fill: #f2a365;
+    fill: var(--select);
 }

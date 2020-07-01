@@ -1,6 +1,8 @@
 :root{
   --select: #f2a365;
+  --unselect: #ececec;
   --backgr: #30475e;
+  --dashboard: #222831;
 }
 
 #root {

@@ -28,9 +28,9 @@ class Nav2 extends Component {
     render() {
         return (
             <div className="navbar">
-                <div className="logo">
+                <Link className="logo" to="/home">
                     <PersonalLogo />
-                </div>
+                </Link>
                 <div className="nav_items">
                     <Nav2Item link="home" active={this.state.active} onClick={(urmom => this.handleClick(urmom))} />   
                     <Nav2Item link="portfolio" active={this.state.active} onClick={(urmom => this.handleClick(urmom))} />  
