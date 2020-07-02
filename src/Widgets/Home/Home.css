@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    background: url('./../../assets/thresholds/tkviolin.svg') no-repeat;
+    /* background: url('./../../assets/thresholds/tkviolin.svg') no-repeat; */
     background-size: cover;
     background-position: center;
 }
@@ -34,8 +34,6 @@
 @media (min-width: 769px) {
     .home_page {
         width: 100% - 100px;
-        /* background-position: center;
-        background-size: 100vw auto; */
     }
 }
 
@@ -43,11 +41,53 @@
     .home_page {
         margin: 80px 0 0 0;
         height: calc(100vh - 80px);
-        /* background-size: cover;
-        background-position: center; */
     }
 }
 
-#TKViolin {
-    fill: rgba(0,0,0,0.1);
+.tkviolin {
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    border-radius: 50%;
+    height: 25vmin;
+    width: 25vmin;
+}
+
+.home_msg {
+    font-size: 2.5vmax;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0 25px 0;
+}
+
+.highlight {
+    font-weight: bold;
+    color: var(--select);
+}
+
+#first_line:after {
+    content: '\a';
+    white-space: pre;
+}
+
+.resume {
+    height: 7vmax;
+    width: 14vmax;
+    background: var(--unselect);
+    color: var(--dashboard);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.75vmax;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.resume:hover {
+    background: var(--select);
 }
