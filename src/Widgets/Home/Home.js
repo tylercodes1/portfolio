@@ -11,7 +11,7 @@ class Home extends Component {
                 <div className="home_msg">
                     <span id="first_line">I'm <span className="highlight">seeking employment,</span></span><span>but you can call me <span className="highlight">Tyler</span></span>
                 </div>
-                <a href="src\assets\resume\TylerKim2020.docx" download="Tylers Resume.docx">
+                <a href="TylerKim2020.docx" download="Tylers Resume.docx">
                     <div className="resume">RESUME</div>
                 </a>
             </div>
