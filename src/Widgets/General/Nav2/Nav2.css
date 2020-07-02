@@ -19,11 +19,12 @@
 }
 
 .navbar {
-    z-index: 2;
     background: #222831;
     width: 100px;
     height: 100%;
     position: absolute;
+    left: 0;
+    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

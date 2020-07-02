@@ -9,6 +9,7 @@
   height: 100%;
 }
 
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto',  'Segoe UI', 'Oxygen',
@@ -24,6 +25,19 @@ body {
 html {
   height: 100%;
 }
+
+@media (max-width: 768px) {
+  #root {
+      height: calc(100vh - 80px);
+  }
+
+  body {
+    height: calc(100vh - 80px);
+  }
+}
+
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

@@ -7,16 +7,47 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    background: url('./../../assets/thresholds/tkviolin.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+
+.violin_back {
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TKViolin {
+    height: 100vmax;
+    width: 100%;
+    z-index: -1;
+}
+
 
 @media (min-width: 769px) {
     .home_page {
         width: 100% - 100px;
+        /* background-position: center;
+        background-size: 100vw auto; */
     }
 }
 
 @media (max-width: 768px) {
     .home_page {
-        margin: 0;
+        margin: 80px 0 0 0;
+        height: calc(100vh - 80px);
+        /* background-size: cover;
+        background-position: center; */
     }
+}
+
+#TKViolin {
+    fill: rgba(0,0,0,0.1);
 }
