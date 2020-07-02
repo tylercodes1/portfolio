@@ -1,0 +1,28 @@
+.drawer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--unselect);
+    z-index: 4;
+}
+
+.drawer_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.drawer_item {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+    color: var(--backgr);
+    font-size: 2em;
+    font-weight: bold;
+}

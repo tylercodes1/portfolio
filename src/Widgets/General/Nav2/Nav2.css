@@ -103,12 +103,35 @@ a {
     height: 100%;
 }
 
-#github {
-    fill: var(--unselect);
-    transition: 0.2s;
+@media (min-width: 769px) {
+    #github {
+        fill: var(--unselect);
+        transition: 0.2s;
+    }
+}
+
+@media (max-width: 768px) {
+    .social_links {
+        height: 50px;
+        position: absolute;
+        bottom: 90px;
+    }
+
+    .social {
+        padding: 10px 0 10px 0;
+    }
+
+    #github {
+        fill: var(--backgr);
+        transition: 0.2s;
+    }
 }
 
 .github:hover > #github {
+    fill: var(--select);
+}
+
+.github:active > #github {
     fill: var(--select);
 }
 
@@ -117,15 +140,30 @@ a {
     width: 100%;
 }
 
-#linkedin1 {
-    fill: var(--unselect);
-    transition: 0.2s;
+@media (min-width: 769px) {
+    #linkedin1 {
+        fill: var(--unselect);
+        transition: 0.2s;
+    }
+    
+    #linkedin2 {
+        fill: var(--unselect);
+        transition: 0.2s;
+    }
 }
 
-#linkedin2 {
-    fill: var(--unselect);
-    transition: 0.2s;
+@media (max-width: 768px) {
+    #linkedin1 {
+        fill: var(--backgr);
+        transition: 0.2s;
+    }
+    
+    #linkedin2 {
+        fill: var(--backgr);
+        transition: 0.2s;
+    }
 }
+
 
 .linkedin:hover > #linkedin1 {
     fill: var(--select);
@@ -133,4 +171,47 @@ a {
 
 .linkedin:hover > #linkedin2 {
     fill: var(--select);
+}
+
+.linkedin:active > #linkedin1 {
+    fill: var(--select);
+}
+
+.linkedin:active > #linkedin2 {
+    fill: var(--select);
+}
+
+.mobile_nav {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    background: var(--dashboard);
+    height: 80px;
+    width: 100vw;
+}
+
+@media (min-width: 769px) {
+    .mobile_nav {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .mobile_nav {
+        z-index: 3;
+    }
+}
+
+.mobile_logo {
+    height: 100%;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
