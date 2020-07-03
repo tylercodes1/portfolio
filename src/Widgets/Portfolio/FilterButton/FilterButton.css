@@ -1,0 +1,35 @@
+.filter_button {
+    background: var(--unselect);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px 20px 5px;
+    height: auto;
+    width: auto;
+    user-select: none;
+}
+
+.filter_button:active {
+    box-shadow: inset 0px -1px 5px #000000;
+
+}
+
+.selected {
+    background: var(--select);
+}
+
+@media (min-width: 769px) {
+    .filter_button {
+        color: var(--dashboard);
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .filter_button {
+        color: var(--dashboard);
+        font-size: 24px;
+    }
+}

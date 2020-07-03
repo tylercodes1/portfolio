@@ -1,5 +1,6 @@
 :root{
-  --select: #f2a365;
+  --select: #f2a265;
+  --hoverSelect: #f7b786;
   --unselect: #ececec;
   --backgr: #30475e;
   --dashboard: #222831;

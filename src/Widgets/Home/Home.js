@@ -3,7 +3,6 @@ import './Home.css'
 import TKViolin from './../../assets/thresholds/tkviolin';
 
 class Home extends Component {
-
     render() {
         return (
             <div className="home_page">
