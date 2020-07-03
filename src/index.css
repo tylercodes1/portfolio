@@ -21,6 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   background: var(--backgr);
+  user-select: none;
 }
 
 html {
