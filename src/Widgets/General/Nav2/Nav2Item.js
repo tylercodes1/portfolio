@@ -6,8 +6,8 @@ function Nav2Item(props) {
     return (
         <Link to={"/" + props.link}>                    
             <div className="item">
-                <div className={"word" + (props.active.slice(1) === props.link ? ' selected' : '')}>{props.link.slice(0,1).toUpperCase() + props.link.slice(1)}</div>
-                <div className={"back" + (props.active.slice(1) === props.link ? ' selected' : '')} />
+                <div className={"word" + (props.active === '/' && props.link === 'home' ? ' selected' : (props.active.slice(1) === props.link ? ' selected' : ''))}>{props.link.slice(0,1).toUpperCase() + props.link.slice(1)}</div>
+                <div className={"back" + (props.active === '/' && props.link === 'home' ? ' selected' : (props.active.slice(1) === props.link ? ' selected' : ''))} />
             </div>
         </Link>   
     )
