@@ -1,9 +1,0 @@
-#sq1 {
-    height: 100px;
-    width: 100px;
-    background: #ececec;
-    animation: rotate 2s linear infinite;
-}
-@keyframes rotate{
-    to{ transform: rotate(360deg); }
-}

@@ -41,12 +41,14 @@
     align-items: center;
     justify-content: center;
     color: var(--unselect);
-    transition: color 0.4s;
     font-weight: bold;
     font-size: 20px;
     user-select: none;
 }
 
+.word {
+    transition: color 0.4s;
+}
 
 .back {
     z-index: -1;

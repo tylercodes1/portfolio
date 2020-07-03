@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './Portfolio.css'
 import FilterButton from './FilterButton/FilterButton';
+import BlockButton from '../Misc/Buttons/BlockButton';
 
 class Portfolio extends Component {
 
@@ -28,7 +29,8 @@ class Portfolio extends Component {
     render() {
         return (
             <div className="portfolio_page">
-                <FilterButton onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} filterName="React"/>
+                <FilterButton text="React" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} filterName="React"/>
+                {/* <BlockButton text="React"></BlockButton> */}
                 <h1>Portfolio</h1>
             </div>
         )
