@@ -30,20 +30,6 @@
     z-index: -1;
 }
 
-
-@media (min-width: 769px) {
-    .home_page {
-        width: 100% - 100px;
-    }
-}
-
-@media (max-width: 768px) {
-    .home_page {
-        margin: 80px 0 0 0;
-        height: calc(100vh - 80px);
-    }
-}
-
 .tkviolin {
     position: absolute;
     bottom: 40px;
@@ -108,3 +94,20 @@
       4px 4px 0 0 var(--dashboard),
       5px 5px 0 0 var(--dashboard);
   }
+
+@media (min-width: 769px) {
+    .home_page {
+        width: 100% - 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home_page {
+        margin: 80px 0 0 0;
+        height: calc(100vh - 80px);
+    }
+
+    .home_msg {
+        font-size: 7vmin;
+    }
+}
