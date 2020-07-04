@@ -13,19 +13,14 @@ class Portfolio extends Component {
     }
     
     handleSelect(filterClass) {
-        console.log("before: " + this.state.selected)
-        console.log("Filter class: " + filterClass)
         this.setState(prevState => {
-            const select = prevState.selected
+            let select = prevState.selected
             let ind = select.indexOf(filterClass)
-            console.log(select)
             if (ind === -1) {
-                console.log('i made it')
-                select.concat(filterClass)
+                select = select.concat(filterClass) // the problem was here; concat method returns an array 
             } else {
-                select.splice(ind,1)
+                select.splice(ind, 1)
             }
-            console.log(select)
             return {
                 selected: select
             }
