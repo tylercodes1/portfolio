@@ -9,21 +9,51 @@ class Portfolio extends Component {
     constructor() {
         super()
         this.state = {
-            selected: []
+            selected: [],
+            filterCombos: [
+                "Web Development React JavaScript",
+                "Other"
+            ],
+            filteredOut: []
         }
     }
     
+    removeFilter(element ,filter) {
+        return element != filter;
+    }
+
     handleSelect(filterClass) {
+        console.log("(Web Development React JavaScript).includes(Web Development)" + ("Web Development React JavaScript").includes("Web Development"))
         this.setState(prevState => {
             let select = prevState.selected
             let ind = select.indexOf(filterClass)
+
+            // filtering logic
+            let fc = prevState.filterCombos
+            let fo = prevState.filteredOut
             if (ind === -1) {
+                // adds filterClass to selected classes
                 select = select.concat(filterClass) // the problem was here; concat method returns an array 
+                // update classes of projects available to sort
+                fc.forEach(element => {
+                    if (!element.includes(filterClass)) {
+                        if (!fo.includes(element)) {
+                            fo = fo.concat(element)
+                        }
+                    }
+                });
             } else {
                 select.splice(ind, 1)
+                if (select.length < 1) {
+                    fo = []
+                }
             }
+            
+            console.log(fo)
             return {
-                selected: select
+                selected: select,
+                filterCombos: fc,
+                filteredOut: fo
             }
         })
     }
@@ -42,17 +72,17 @@ class Portfolio extends Component {
         return (
             <div className="portfolio_page">
                 <div className="filter_header">
-                    <FilterButton text="Web Development" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} />
-                    <FilterButton text="React" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} />
-                    <FilterButton text="JavaScript" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} />
-                    <FilterButton text="Other" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} />
+                    <FilterButton filteredOut={this.state.filteredOut} text="Web Development" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} />
+                    <FilterButton filteredOut={this.state.filteredOut} text="React" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} />
+                    <FilterButton filteredOut={this.state.filteredOut} text="JavaScript" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} />
+                    <FilterButton filteredOut={this.state.filteredOut} text="Other" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} />
                 </div>
                 <div className="project_container">
                     <ProjectPreview display={this.state.selected.length < 1 ? null :
-                    !this.state.selected.some(el => ("Web Development React JavaScript").includes(el))? "hide_project" : null} 
+                    !this.state.selected.some(el => (this.state.filterCombos[0]).includes(el))? "hide_project" : null} 
                     title="Portfolio" src="Portfolio.PNG" url="https://tylersportfolio.netlify.app/" stack="React JavaScript"/>
                     <ProjectPreview display={this.state.selected.length < 1 ? null :
-                    !this.state.selected.some(el => ("Other").includes(el))? "hide_project" : null} 
+                    !this.state.selected.some(el => (this.state.filterCombos[1]).includes(el))? "hide_project" : null} 
                     title="Other" src="Portfolio.PNG" url="https://tylersportfolio.netlify.app/" stack=" JavaScript"/>
                 </div>
             </div>
