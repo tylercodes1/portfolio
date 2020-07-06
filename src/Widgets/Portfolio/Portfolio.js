@@ -28,6 +28,16 @@ class Portfolio extends Component {
         })
     }
 
+    // handleActive(filters) {
+    //     let tmp = this.state.selected
+    //     while (tmp.length > 0) {
+    //         for (s in tmp) {
+                
+    //         }
+    //     }
+    //     return null
+    // }
+
     render() {
         return (
             <div className="portfolio_page">
