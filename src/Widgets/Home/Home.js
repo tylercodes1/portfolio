@@ -9,7 +9,7 @@ class Home extends Component {
             <div className="home_page">
                 <TKViolin />
                 <div className="home_msg">
-                    <span id="first_line">I'm <span className="highlight">seeking employment,</span></span><span>but you can call me <span className="highlight">Tyler</span></span>
+                    <span id="first_line">I'm <span className="highlight">seeking employment,</span></span><span>but you can call me <span className="highlight">Tyler.</span></span>
                 </div>
                 <a href="TylerKim2020.docx" download="Tylers Resume.docx">
                     <BlockButton text="RESUME"></BlockButton>

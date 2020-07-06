@@ -21,6 +21,7 @@
       11px 11px 0 0 var(--dashboard),
       12px 12px 0 0 var(--dashboard);
       cursor: pointer;
+      margin: 20px 10px 20px 10px;
 }
 
 .filter_button:active{

@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import './Portfolio.css'
 import FilterButton from './FilterButton/FilterButton';
 import BlockButton from '../Misc/Buttons/BlockButton';
+import ProjectPreview from './ProjectPreview/ProjectPreview';
 
 class Portfolio extends Component {
 
@@ -30,9 +31,18 @@ class Portfolio extends Component {
     render() {
         return (
             <div className="portfolio_page">
-                <FilterButton text="React" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} />
-                <FilterButton text="Web Development" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} />
-                <h1>Portfolio</h1>
+                <div className="filter_header">
+                    <FilterButton text="Web Development" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} />
+                    <FilterButton text="React" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} />
+                    <FilterButton text="JavaScript" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} />
+                    <FilterButton text="Other" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} />
+                </div>
+                <div className="project_container">
+                    <ProjectPreview />
+                    <ProjectPreview />
+                    <ProjectPreview />
+                    <ProjectPreview />
+                </div>
             </div>
         )
     }

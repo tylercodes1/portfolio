@@ -1,0 +1,36 @@
+.description_view {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: var(--dashboard);
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 2vmax;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.3vmax;
+}
+
+.tech_stack_title {
+    font-size: 1.6vmax;
+    margin-bottom: 1vmin;
+    font-weight: 600;
+}
+
+.ReactLogo {
+    padding: 0 2px 0 2px;
+    height: 100%;
+    width: 20%;
+}
+
+.javascript {
+    padding: 0 2px 0 2px;
+    height: 100%;
+    width: 20%;
+}
