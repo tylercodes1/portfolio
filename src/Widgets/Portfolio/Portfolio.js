@@ -38,10 +38,12 @@ class Portfolio extends Component {
                     <FilterButton text="Other" onClick={(urmom) => this.handleSelect(urmom)} selected={this.state.selected} />
                 </div>
                 <div className="project_container">
-                    <ProjectPreview />
-                    <ProjectPreview />
-                    <ProjectPreview />
-                    <ProjectPreview />
+                    <ProjectPreview display={this.state.selected.length < 1 ? null :
+                    !this.state.selected.some(el => ("Web Development React JavaScript").includes(el))? "hide_project" : null} 
+                    title="Portfolio" src="Portfolio.PNG" url="https://tylersportfolio.netlify.app/" stack="React JavaScript"/>
+                    <ProjectPreview display={this.state.selected.length < 1 ? null :
+                    !this.state.selected.some(el => ("Other").includes(el))? "hide_project" : null} 
+                    title="Other" src="Portfolio.PNG" url="https://tylersportfolio.netlify.app/" stack=" JavaScript"/>
                 </div>
             </div>
         )

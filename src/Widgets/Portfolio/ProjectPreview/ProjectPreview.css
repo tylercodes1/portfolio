@@ -21,3 +21,7 @@
 .project_preview:hover > .filter_backdrop {
     opacity: 1;
 }
+
+.hide_project {
+    display: none;
+}

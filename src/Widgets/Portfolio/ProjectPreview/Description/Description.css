@@ -5,11 +5,22 @@
     flex-direction: column;
     flex-wrap: wrap;
     color: var(--dashboard);
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.smaller_backdrop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vmax;
+    width: 13vmax;
+    background-color: white;
 }
 
 .title {
-    font-size: 2vmax;
+    text-align: center;
+    font-size: 1.8vmax;
     font-weight: bold;
 }
 
@@ -23,14 +34,20 @@
     font-weight: 600;
 }
 
+.logo_container {
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
 .ReactLogo {
     padding: 0 2px 0 2px;
     height: 100%;
-    width: 20%;
+    width: 25%;
 }
 
 .javascript {
     padding: 0 2px 0 2px;
     height: 100%;
-    width: 20%;
+    width: 25%;
 }
