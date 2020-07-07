@@ -3,7 +3,7 @@ import './BlockButton.css'
 
 function BlockButton(props) {
     return(
-        <div className="block_button">{props.text}</div>
+        <div className={"block_button" + (props.pressed ? " pressed" : '')}>{props.text}</div>
     )
 }
 

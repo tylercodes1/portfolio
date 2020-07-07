@@ -95,6 +95,10 @@
       5px 5px 0 0 var(--dashboard);
   }
 
+  .btn_pressed {
+      pointer-events: none;
+  }
+
 @media (min-width: 769px) {
     .home_page {
         width: 100% - 100px;
