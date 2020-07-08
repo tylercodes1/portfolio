@@ -2,6 +2,7 @@ import React from 'react'
 import './Description.css'
 import ReactLogo from '../../../../assets/react/ReactLogo'
 import JavaScriptLogo from '../../../../assets/react/JavaScriptLogo'
+import Github from './../../../../assets/github/github';
 
 function Description(props) {
     return (
