@@ -4,7 +4,7 @@
     margin: 0 0 0 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: space-evenly; */
     align-items: center;
     height: 100%;
 }
@@ -15,8 +15,38 @@
     }
 }
 
+.top {
+    text-align: center;
+}
+
+
+.name {
+    font-size: 7vw;
+}
+
+.role {
+    font-size: 3vw;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.about_img {
+    
+}
+
+.about_box {
+    background-color: var(--unselect);
+}
+
+.about {
+    user-select: text;
+    padding: 25px;
+}
+
+
+
 @media (max-width: 768px) {
     .about_page {
-        margin: 0;
+        margin: 80px;
     }
 }

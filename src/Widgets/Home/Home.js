@@ -27,7 +27,7 @@ class Home extends Component {
                 <div className="home_msg">
                     <span id="first_line">I'm <span className="highlight">seeking employment,</span></span><span>but you can call me <span className="highlight">Tyler.</span></span>
                 </div>
-                <a className={'btn' + (this.state.pressed ? ' btn_pressed' : '')} onClick={() => this.handleClick()} href="TylerKim2020.docx" download="Tylers Resume.docx">
+                <a className={'btn' + (this.state.pressed ? ' btn_pressed' : '')} onClick={() => this.handleClick()} href="TylerKim2020.docx" download="kim_tyler.docx">
                     <BlockButton text="RESUME" pressed={this.state.pressed}></BlockButton>
                 </a>
             </div>
