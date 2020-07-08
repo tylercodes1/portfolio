@@ -63,7 +63,7 @@
       transform: rotate(360deg);
     }
   }
-  .tmp_msg {
+  .s_tmp_msg {
     -webkit-animation: rotating 2s linear infinite;
     -moz-animation: rotating 2s linear infinite;
     -ms-animation: rotating 2s linear infinite;
