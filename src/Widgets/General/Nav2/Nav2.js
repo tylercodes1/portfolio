@@ -19,11 +19,11 @@ function Nav2() {
                 <Nav2Item link="portfolio" active={location.pathname} />  
                 <Nav2Item link="skills" active={location.pathname} />
                 <Nav2Item link="about" active={location.pathname} />
-                <Nav2Item link="Contact" active={location.pathname} />
+                <Nav2Item link="contact" active={location.pathname} />
             </div>
             <div className="social_items">
                 <SocialItem icon={<Github />} url="https://github.com/tkmoney11"></SocialItem>
-                <SocialItem icon={<Linkedin />} url="https://www.linkedin.com/in/tylerkim11/"></SocialItem>
+                <SocialItem icon={<Linkedin class="linkedin" id1="linkedin1" id2="linkedin2"/>}  url="https://www.linkedin.com/in/tylerkim11/"></SocialItem>
             </div>
         </div>
         

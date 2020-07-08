@@ -4,6 +4,7 @@ import Nav2 from './Nav2/Nav2.js'
 import About from '../About/About.js'
 import Portfolio from '../Portfolio/Portfolio.js'
 import Home from '../Home/Home.js'
+import Contact from '../Contact/Contact.js'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Nav2Top from './Nav2/Nav2Top';
 import BackDrop from './Nav2/BackDrop/BackDrop'
@@ -50,6 +51,7 @@ class App2 extends Component {
                         <Route path="/home" component={Home} />
                         <Route path="/about" component={About}/>
                         <Route path="/portfolio" component={Portfolio} />
+                        <Route path="/contact" component={Contact} />
                     </Switch>
                 </div>
             </Router>

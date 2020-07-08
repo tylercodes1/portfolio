@@ -1,0 +1,112 @@
+.contact_page {
+    position: relative;
+    margin: 0 0 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.contact_box {
+    width: 500px;
+    background-color: var(--unselect);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-size: 25px;
+    user-select: text;
+    text-align: center;
+}
+
+.contact_head {
+    margin: 0 0 15px;
+}
+
+#hi {
+    font-weight: bold;
+}
+
+.contact_items {
+    color: black;
+    display: flex;
+    background-color: var(--dashboard);
+    padding: 0 20px 0 20px;
+}
+
+a {
+    text-align: right;
+}
+
+.contact_item {
+    margin: 0 10px 0 10px;
+    width: 100px;
+    height: 100px;
+    color: black;
+}
+
+.c_linkedin {
+    height: 100%;
+    width: 100%;
+    transition: 0.2s;
+}
+
+#c_linkedin1 {
+    fill: var(--unselect);
+}
+
+#c_linkedin2 {
+    fill: var(--unselect);
+}
+
+.contact_item:hover > .c_linkedin > #c_linkedin1 {
+    fill: var(--select);
+}
+
+.c_mail {
+    height: 100%;
+    width: 100%;
+}
+
+#c_mail {
+    fill: var(--unselect);
+}
+
+.contact_item:hover > .c_mail > #c_mail {
+    fill: var(--select);
+}
+
+.c_phone {
+    height: 100%;
+    width: 100%;
+}
+
+#c_phone {
+    fill: var(--unselect);
+}
+
+.contact_item:hover > .c_phone > #c_phone {
+    fill: var(--select);
+}
+
+@media (min-width: 769px) {
+    .contact_page {
+        width: calc(100% - 100px);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact_page {
+        margin: 0;
+    }
+    
+    .contact_box {
+        width: 85vw;
+    }
+
+    .contact_item {
+        width: 20vw;
+        height: 20vw;
+    }
+}

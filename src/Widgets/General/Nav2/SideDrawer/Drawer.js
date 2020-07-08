@@ -27,7 +27,7 @@ function Drawer(props) {
             </div>
             <div className="social_links">
                 <SocialItem icon={<Github />} url="https://github.com/tkmoney11"></SocialItem>
-                <SocialItem icon={<Linkedin />} url="https://www.linkedin.com/in/tylerkim11/"></SocialItem>
+                <SocialItem icon={<Linkedin class="linkedin" id1="linkedin1" id2="linkedin2" />} url="https://www.linkedin.com/in/tylerkim11/"></SocialItem>
             </div>
         </div>
     )
