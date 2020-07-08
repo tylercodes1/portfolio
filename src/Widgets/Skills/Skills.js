@@ -6,9 +6,9 @@ class Skills extends Component {
     render() {
         return (
             <div className="skills_page">
-                <div className="tmp_msg">
+                <div className="s_tmp_msg">
                 </div>
-                <div className="msg">COMING SOON!</div>
+                <div className="s_msg">COMING SOON!</div>
             </div>
         )
     }

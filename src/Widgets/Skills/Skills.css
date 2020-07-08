@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.tmp_msg {
+.s_tmp_msg {
     height: 200px;
     width: 200px;
     background-color: var(--unselect);
@@ -17,7 +17,7 @@
     font-weight: bold;
 }
 
-.msg {
+.s_msg {
     position: absolute;
     font-size: 25px;
     font-weight: bold;
