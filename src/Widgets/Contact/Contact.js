@@ -16,7 +16,7 @@ class Contact extends Component {
                                 <Linkedin class="c_linkedin" id1="c_linkedin1" id2="c_linkedin2"/>
                             </div>
                         </a>
-                        <a target="_blank" href="mailto: tylerkim1911@gmail.com">
+                        <a target="_blank" href="mailto: tylerkim@outlook.com">
                             <div className="contact_item">
                                 <Mail class="c_mail" id="c_mail"/>
                             </div>
