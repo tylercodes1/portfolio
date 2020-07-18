@@ -19,7 +19,6 @@
     text-align: center;
 }
 
-
 .name {
     font-size: 65px;
     font-weight: bold;
@@ -32,6 +31,7 @@
 }
 
 .content {
+    /* display: none; */
     margin: 60px 0 0 0;
     position: relative;
 }
