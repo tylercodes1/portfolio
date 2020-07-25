@@ -96,7 +96,7 @@ class Portfolio extends Component {
                 <div className="project_container">
                     <ProjectPreview display={this.state.selected.length < 1 ? null :
                     !this.state.selected.every(el => (this.state.filterCombos[0]).includes(el))? "hide_project" : null} 
-                    title="Portfolio" src="Portfolio-compressor.PNG" url="https://tylersportfolio.netlify.app/" stack="React JavaScript"/>
+                    title="Portfolio" src="Portfolio-compressor.jpg" url="https://tylersportfolio.netlify.app/" stack="React JavaScript"/>
                 </div>
             </div>
         )

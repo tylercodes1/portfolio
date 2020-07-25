@@ -18,7 +18,7 @@ class About extends Component {
                         <br />
                         <div className="shoutout">Shoutout to <a className="jeannine" href="https://www.jeanninepoundphotography.com/" target="_blank"><span id="backdrop">Jeannine Pound Photography.</span></a> She does a marvelous job.</div>
                     </div>
-                    <img className="about_img" src="TylerViolin-compressor.jpg" alt=""/>
+                    <img className="about_img" src="TylerViolin-compressor(1).jpg" alt=""/>
                 </div>
             </div>
         )
