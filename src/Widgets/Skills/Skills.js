@@ -9,6 +9,7 @@ class Skills extends Component {
                 <div className="s_tmp_msg">
                 </div>
                 <div className="s_msg">COMING SOON!</div>
+                <div className="tmp_massage">I will add certifications and courses to verify <br/>my proficiency in various languages!</div>
             </div>
         )
     }
