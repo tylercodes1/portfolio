@@ -2,7 +2,7 @@
     color: var(--dashboard);
     outline:0; 
     font-size: 1.75vmax;
-    font-weight:600;
+    font-weight:bold;
     background:#fff;
     border:none;
     padding: 1.3vmax 1.5vmax;
