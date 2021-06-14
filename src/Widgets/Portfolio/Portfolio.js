@@ -12,13 +12,13 @@ class Portfolio extends Component {
 			filterCombos: [
 				"Web-Development React JavaScript",
 				"Web-Development Fullstack API Spring-Boot Java",
+				"Web-Development Fullstack React JavaScript",
 			],
 			filteredOut: [],
 			filteredIn: [
 				"Web-Development React JavaScript",
-				"Other",
-				"React JavaScript",
 				"Web-Development Java API Fullstack Spring-Boot",
+				"Web-Development Fullstack React JavaScript",
 			],
 		};
 	}
@@ -174,6 +174,24 @@ class Portfolio extends Component {
 						title="Messaging API"
 						src="MESSAGING-API.png"
 						url="http://monolith-service.herokuapp.com/swagger-ui/index.html#/"
+						stack="Spring-Boot Java"
+					/>
+					<ProjectPreview
+						display={
+							this.state.selected.length < 1
+								? null
+								: !this.state.selected.every((el) => {
+										console.log(this.state.filterCombos[0], el);
+										return this.state.filterCombos[2] // THIS INDEX IS IMPORTANT FOR FILTERING
+											.split(" ")
+											.includes(el);
+								  })
+								? "hide_project"
+								: null
+						}
+						title="Messaging App"
+						src="Messaging-App.png"
+						url="https://fullstack-messaging-app.netlify.app/"
 						stack="Spring-Boot Java"
 					/>
 				</div>
