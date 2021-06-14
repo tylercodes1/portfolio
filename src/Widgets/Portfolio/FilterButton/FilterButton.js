@@ -14,7 +14,7 @@ function FilterButton(props) {
 			}
 			onClick={() => props.onClick(props.text)}
 		>
-			{props.text.replace("-", " ")}
+			{props.text.replace(/-/g, " ")}
 		</div>
 	);
 }
