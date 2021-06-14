@@ -109,13 +109,6 @@ class Portfolio extends Component {
 					<FilterButton
 						filteredIn={this.state.filteredIn}
 						filteredOut={this.state.filteredOut}
-						text="Temp Filter Demo"
-						onClick={(urmom) => this.handleSelect(urmom)}
-						selected={this.state.selected}
-					/>
-					<FilterButton
-						filteredIn={this.state.filteredIn}
-						filteredOut={this.state.filteredOut}
 						text="Spring-Boot"
 						onClick={(urmom) => this.handleSelect(urmom)}
 						selected={this.state.selected}
