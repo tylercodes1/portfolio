@@ -22,7 +22,7 @@ function Nav2() {
 			<div className="nav_items">
 				<Nav2Item link="home" active={location.pathname} />
 				<Nav2Item link="portfolio" active={location.pathname} />
-				<Nav2Item link="skills" active={location.pathname} />
+				{/* <Nav2Item link="skills" active={location.pathname} /> */}
 				<Nav2Item link="about" active={location.pathname} />
 				<Nav2Item link="contact" active={location.pathname} />
 			</div>
