@@ -10,15 +10,17 @@ class Portfolio extends Component {
 		this.state = {
 			selected: [],
 			filterCombos: [
-				"Web-Development React JavaScript",
+				"Web-Development Mobile-Responsive React JavaScript",
 				"Web-Development Fullstack API Spring-Boot Java",
 				"Web-Development Fullstack React JavaScript",
+				"Web-Development JavaScript First-Ever-Project-:)",
 			],
 			filteredOut: [],
 			filteredIn: [
-				"Web-Development React JavaScript",
+				"Web-Development Mobile-Responsive React JavaScript",
 				"Web-Development Java API Fullstack Spring-Boot",
 				"Web-Development Fullstack React JavaScript",
+				"Web-Development JavaScript First-Ever-Project-:)",
 			],
 		};
 	}
@@ -88,7 +90,21 @@ class Portfolio extends Component {
 					<FilterButton
 						filteredIn={this.state.filteredIn}
 						filteredOut={this.state.filteredOut}
+						text="First-Ever-Project-:)"
+						onClick={(urmom) => this.handleSelect(urmom)}
+						selected={this.state.selected}
+					/>
+					<FilterButton
+						filteredIn={this.state.filteredIn}
+						filteredOut={this.state.filteredOut}
 						text="Web-Development"
+						onClick={(urmom) => this.handleSelect(urmom)}
+						selected={this.state.selected}
+					/>
+					<FilterButton
+						filteredIn={this.state.filteredIn}
+						filteredOut={this.state.filteredOut}
+						text="Mobile-Responsive"
 						onClick={(urmom) => this.handleSelect(urmom)}
 						selected={this.state.selected}
 					/>
@@ -136,6 +152,21 @@ class Portfolio extends Component {
 					/>
 				</div>
 				<div className="project_container">
+					<ProjectPreview
+						display={
+							this.state.selected.length < 1
+								? null
+								: !this.state.selected.every((el) =>
+										this.state.filterCombos[3].split(" ").includes(el)
+								  )
+								? "hide_project"
+								: null
+						}
+						title="Sorting Algorithm Visualizer"
+						src="Sorting-Algorithm-Viz.png"
+						url="https://annieztang.github.io/Algos/"
+						stack="Web-Development JavaScript First-Ever-Project-:)"
+					/>
 					<ProjectPreview
 						display={
 							this.state.selected.length < 1
