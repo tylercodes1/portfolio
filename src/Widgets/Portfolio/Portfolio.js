@@ -10,15 +10,15 @@ class Portfolio extends Component {
 		this.state = {
 			selected: [],
 			filterCombos: [
-				"Web Development React JavaScript",
-				"Other",
-				"React JavaScript",
+				"Web-Development React JavaScript",
+				"Web-Development Fullstack API Spring-Boot Java",
 			],
 			filteredOut: [],
 			filteredIn: [
-				"Web Development React JavaScript",
+				"Web-Development React JavaScript",
 				"Other",
 				"React JavaScript",
+				"Web-Development Java API Fullstack Spring-Boot",
 			],
 		};
 	}
@@ -27,29 +27,39 @@ class Portfolio extends Component {
 		return element != filter;
 	}
 
-	handleSelect(filterClass) {
+	handleSelect(currentFilter) {
 		this.setState((prevState) => {
-			let select = prevState.selected;
-			let ind = select.indexOf(filterClass);
+			let previousSelectedFilters = prevState.selected;
+			let ind = previousSelectedFilters.indexOf(currentFilter);
 			// filtering logic
 			let fc = prevState.filterCombos;
 			let fo = prevState.filteredOut;
+			// console.log(previousSelectedFilters, ind, fc, fo, currentFilter);
 
+			// if current selected filter does not exist in previously selected filters
 			if (ind === -1) {
-				select = select.concat(filterClass); // the problem was here; concat method returns an array
+				previousSelectedFilters =
+					previousSelectedFilters.concat(currentFilter); // the problem was here; concat method returns an array
 				fc.forEach((element) => {
-					if (!element.includes(filterClass)) {
-						if (!fo.includes(element) && !select.includes(element)) {
+					console.log(element);
+					if (!element.includes(currentFilter)) {
+						if (
+							!fo.includes(element) &&
+							!previousSelectedFilters.includes(element)
+						) {
 							fo = fo.concat(element);
 						}
 					}
 				});
+				// if current selected filter DOES exist in previously selected filters
 			} else {
-				select.splice(ind, 1);
+				previousSelectedFilters.splice(ind, 1); // removes current selected filter
 
-				if (select.length < 1) {
+				// clear "filtered out" if none selected
+				if (previousSelectedFilters.length < 1) {
 					fo = [];
 				} else {
+					// console.log(fo, fi, currentFilter);
 				}
 			}
 
@@ -59,9 +69,10 @@ class Portfolio extends Component {
 					fi = fi.concat(elFC);
 				}
 			});
+			console.log(fo, fi);
 
 			return {
-				selected: select,
+				selected: previousSelectedFilters,
 				filterCombos: fc,
 				filteredOut: fo,
 				filteredIn: fi,
@@ -77,7 +88,7 @@ class Portfolio extends Component {
 					<FilterButton
 						filteredIn={this.state.filteredIn}
 						filteredOut={this.state.filteredOut}
-						text="Web Development"
+						text="Web-Development"
 						onClick={(urmom) => this.handleSelect(urmom)}
 						selected={this.state.selected}
 					/>
@@ -102,6 +113,34 @@ class Portfolio extends Component {
 						onClick={(urmom) => this.handleSelect(urmom)}
 						selected={this.state.selected}
 					/>
+					<FilterButton
+						filteredIn={this.state.filteredIn}
+						filteredOut={this.state.filteredOut}
+						text="Spring-Boot"
+						onClick={(urmom) => this.handleSelect(urmom)}
+						selected={this.state.selected}
+					/>
+					<FilterButton
+						filteredIn={this.state.filteredIn}
+						filteredOut={this.state.filteredOut}
+						text="Fullstack"
+						onClick={(urmom) => this.handleSelect(urmom)}
+						selected={this.state.selected}
+					/>
+					<FilterButton
+						filteredIn={this.state.filteredIn}
+						filteredOut={this.state.filteredOut}
+						text="API"
+						onClick={(urmom) => this.handleSelect(urmom)}
+						selected={this.state.selected}
+					/>
+					<FilterButton
+						filteredIn={this.state.filteredIn}
+						filteredOut={this.state.filteredOut}
+						text="Java"
+						onClick={(urmom) => this.handleSelect(urmom)}
+						selected={this.state.selected}
+					/>
 				</div>
 				<div className="project_container">
 					<ProjectPreview
@@ -109,7 +148,7 @@ class Portfolio extends Component {
 							this.state.selected.length < 1
 								? null
 								: !this.state.selected.every((el) =>
-										this.state.filterCombos[0].includes(el)
+										this.state.filterCombos[0].split(" ").includes(el)
 								  )
 								? "hide_project"
 								: null
@@ -118,6 +157,24 @@ class Portfolio extends Component {
 						src="Portfolio-compressor.jpg"
 						url="https://tylersportfolio.netlify.app/"
 						stack="React JavaScript"
+					/>
+					<ProjectPreview
+						display={
+							this.state.selected.length < 1
+								? null
+								: !this.state.selected.every((el) => {
+										console.log(this.state.filterCombos[0], el);
+										return this.state.filterCombos[1] // THIS INDEX IS IMPORTANT FOR FILTERING
+											.split(" ")
+											.includes(el);
+								  })
+								? "hide_project"
+								: null
+						}
+						title="Messaging API"
+						src="MESSAGING-API.png"
+						url="http://monolith-service.herokuapp.com/swagger-ui/index.html#/"
+						stack="Spring-Boot Java"
 					/>
 				</div>
 			</div>
