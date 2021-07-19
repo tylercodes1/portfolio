@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav2Top from "./Nav2/Nav2Top";
 import BackDrop from "./Nav2/BackDrop/BackDrop";
 import Drawer from "./Nav2/SideDrawer/Drawer";
+import Blog from "../Blog/Blog";
 
 class App2 extends Component {
 	constructor() {
@@ -50,6 +51,7 @@ class App2 extends Component {
 						<Route path="/" exact component={Home} />
 						<Route path="/home" component={Home} />
 						<Route path="/about" component={About} />
+						<Route path="/blog" component={Blog} />
 						<Route path="/portfolio" component={Portfolio} />
 						<Route path="/contact" component={Contact} />
 						<Route path="/skills" component={Skills} />

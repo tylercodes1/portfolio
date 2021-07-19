@@ -1,0 +1,9 @@
+.blog_page {
+    position: relative;
+    margin: 0 0 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
