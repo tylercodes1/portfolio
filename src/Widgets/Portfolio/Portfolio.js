@@ -71,7 +71,6 @@ class Portfolio extends Component {
 					fi = fi.concat(elFC);
 				}
 			});
-			console.log(fo, fi);
 
 			return {
 				selected: previousSelectedFilters,
