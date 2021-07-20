@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import FilterButton from '../Portfolio/FilterButton/FilterButton'
+import ProjectPreview from '../Portfolio/ProjectPreview/ProjectPreview'
+import BlogPreview from './Blog Preview/BlogPreview'
 import './Blog.css'
 
 const Blog = () => {
@@ -57,7 +59,7 @@ const Blog = () => {
         setFilterCombos(fc)
         setFilteredIn(fi)
         setFilteredOut(fo)
-        
+
         return {
             selected: previousSelectedFilters,
             filterCombos: fc,
@@ -68,13 +70,30 @@ const Blog = () => {
 
     return (
         <div className="blog_page">
-            <FilterButton
-                filteredIn={filteredIn}
-                filteredOut={filteredOut}
-                text="Temp"
-                onClick={(urmom) => handleSelect(urmom)}
-                selected={selected}
-            />
+            <div className="filter_header">
+                <FilterButton
+                    filteredIn={filteredIn}
+                    filteredOut={filteredOut}
+                    text="Temp"
+                    onClick={(urmom) => handleSelect(urmom)}
+                    selected={selected}
+                />
+            </div>
+            <div className="blog_container">
+                <BlogPreview 
+                    display={
+                    selected.length < 1 
+                    ? null
+                    : selected.every((el) => 
+                        filterCombos[0].split(" ").includes(el)    
+                    )
+                    ? "hide_project"
+                    : null
+                } 
+                title="Plutus Pioneer Program"
+                src="input_output_logo.png"
+                />
+            </div>
         </div>
     )
 }
