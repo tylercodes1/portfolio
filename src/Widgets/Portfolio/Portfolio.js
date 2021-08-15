@@ -28,37 +28,35 @@ function Portfolio() {
 		// filtering logic
 		let fc = filterCombos;
 		let fo = filteredOut;
-		// console.log(previousSelectedFilters, ind, fc, fo, currentFilter);
 
 		// if current selected filter does not exist in previously selected filters
 		if (ind === -1) {
 			previousSelectedFilters =
 				previousSelectedFilters.concat(currentFilter); // the problem was here; concat method returns an array
-			fc.forEach((element) => {
-				if (!element.includes(currentFilter)) {
-					if (
-						!fo.includes(element) &&
-						!previousSelectedFilters.includes(element)
-					) {
-						fo = fo.concat(element);
-					}
-				}
-			});
-			// if current selected filter DOES exist in previously selected filters
+		// if current selected filter DOES exist in previously selected filters
 		} else {
 			previousSelectedFilters.splice(ind, 1); // removes current selected filter
-
-			// clear "filtered out" if none selected
-			if (previousSelectedFilters.length < 1) {
-				fo = [];
-			} else {
-				// console.log(fo, fi, currentFilter);
-			}
 		}
+
+		fo = [];
+		// clear "filtered out" if none selected
+		if (previousSelectedFilters.length > 1) {
+			console.log(previousSelectedFilters)
+			fc.forEach((element) => {
+				console.log(element.includes(previousSelectedFilters[0]))
+				if (!previousSelectedFilters.every(elPS => element.includes(elPS))) {
+					console.log(element, previousSelectedFilters)
+					fo = fo.concat(element)
+				}
+			});						
+		}
+		console.log(fo)
 
 		let fi = [];
 		fc.forEach((elFC) => {
-			if (fo.every((elFO) => elFO !== elFC)) {
+			if (fo.every((elFO) => {
+				return elFO !== elFC
+			})) {
 				fi = fi.concat(elFC);
 			}
 		});
