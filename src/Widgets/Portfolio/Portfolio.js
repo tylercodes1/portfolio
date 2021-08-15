@@ -77,63 +77,63 @@ function Portfolio() {
 					filteredIn={filteredIn}
 					filteredOut={filteredOut}
 					text="First-Ever-Project-:)"
-					onClick={(urmom) => handleSelect(urmom)}
+					onClick={(currFilter) => handleSelect(currFilter)}
 					selected={selected}
 				/>
 				<FilterButton
 					filteredIn={filteredIn}
 					filteredOut={filteredOut}
 					text="Web-Development"
-					onClick={(urmom) => handleSelect(urmom)}
+					onClick={(currFilter) => handleSelect(currFilter)}
 					selected={selected}
 				/>
 				<FilterButton
 					filteredIn={filteredIn}
 					filteredOut={filteredOut}
 					text="Mobile-Responsive"
-					onClick={(urmom) => handleSelect(urmom)}
+					onClick={(currFilter) => handleSelect(currFilter)}
 					selected={selected}
 				/>
 				<FilterButton
 					filteredIn={filteredIn}
 					filteredOut={filteredOut}
 					text="React"
-					onClick={(urmom) => handleSelect(urmom)}
+					onClick={(currFilter) => handleSelect(currFilter)}
 					selected={selected}
 				/>
 				<FilterButton
 					filteredIn={filteredIn}
 					filteredOut={filteredOut}
 					text="JavaScript"
-					onClick={(urmom) => handleSelect(urmom)}
+					onClick={(currFilter) => handleSelect(currFilter)}
 					selected={selected}
 				/>
 				<FilterButton
 					filteredIn={filteredIn}
 					filteredOut={filteredOut}
 					text="Spring-Boot"
-					onClick={(urmom) => handleSelect(urmom)}
+					onClick={(currFilter) => handleSelect(currFilter)}
 					selected={selected}
 				/>
 				<FilterButton
 					filteredIn={filteredIn}
 					filteredOut={filteredOut}
 					text="Fullstack"
-					onClick={(urmom) => handleSelect(urmom)}
+					onClick={(currFilter) => handleSelect(currFilter)}
 					selected={selected}
 				/>
 				<FilterButton
 					filteredIn={filteredIn}
 					filteredOut={filteredOut}
 					text="API"
-					onClick={(urmom) => handleSelect(urmom)}
+					onClick={(currFilter) => handleSelect(currFilter)}
 					selected={selected}
 				/>
 				<FilterButton
 					filteredIn={filteredIn}
 					filteredOut={filteredOut}
 					text="Java"
-					onClick={(urmom) => handleSelect(urmom)}
+					onClick={(currFilter) => handleSelect(currFilter)}
 					selected={selected}
 				/>
 			</div>
