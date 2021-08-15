@@ -39,8 +39,8 @@
 .about_box {
     position: absolute;
     top: -20px;
-    left: -40px;
-    width: 45%;
+    left: -60px;
+    width: 55%;
     background-color: var(--unselect);
     user-select: text;
     padding: 25px;
@@ -51,6 +51,7 @@
 
 .about_img {
     position: relative;
+    width: 50vh;
 }
 
 .jeannine {

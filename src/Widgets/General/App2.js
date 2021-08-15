@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./App2.css";
 import Nav2 from "./Nav2/Nav2.js";
 import About from "../About/About.js";
@@ -11,42 +11,32 @@ import Nav2Top from "./Nav2/Nav2Top";
 import BackDrop from "./Nav2/BackDrop/BackDrop";
 import Drawer from "./Nav2/SideDrawer/Drawer";
 import Blog from "../Blog/Blog";
+import AppContext from "./support/AppContext";
 
-class App2 extends Component {
-	constructor() {
-		super();
-		this.state = {
-			show: false,
-		};
+function App2() {
+	const [show, setShow] = useState(false)
+	const [aboutFirstLoad, setAboutFirstLoad] = useState(true)
+	const [portfolioFirstLoad, setPortfolioFirstLoad] = useState(true)
+
+	const handleClick = () => {
+		setShow(!show)
 	}
 
-	handleClick() {
-		console.log(this.state.show);
-		this.setState((prevState) => {
-			return {
-				show: !prevState.show,
-			};
-		});
+	const context = {
+		aboutFirstLoad,
+		setAboutFirstLoad,
+		portfolioFirstLoad,
+		setPortfolioFirstLoad
 	}
 
-	render() {
-		let backdrop;
-		let drawer;
-		let normalNav;
-		let normalSwitch;
-		if (this.state.show) {
-			backdrop = <BackDrop onClick={() => this.handleClick()} />;
-			drawer = <Drawer onClick={() => this.handleClick()} />;
-		} else {
-			normalNav = <Nav2 />;
-		}
-		return (
-			<Router>
-				<div className="app2">
-					<Nav2Top onClick={() => this.handleClick()} />
-					{drawer}
-					{backdrop}
-					{normalNav}
+	return (
+		<Router>
+			<div className="app2">
+				<AppContext.Provider value={context}>
+					<Nav2Top onClick={handleClick} />
+					{show && <Drawer onClick={handleClick} />}
+					{show &&  <BackDrop onClick={handleClick} />}
+					{!show && <Nav2 />}
 					<Switch>
 						<Route path="/" exact component={Home} />
 						<Route path="/home" component={Home} />
@@ -56,10 +46,10 @@ class App2 extends Component {
 						<Route path="/contact" component={Contact} />
 						<Route path="/skills" component={Skills} />
 					</Switch>
-				</div>
-			</Router>
-		);
-	}
+				</AppContext.Provider>
+			</div>
+		</Router>
+	);
 }
 
 export default App2;
